@@ -38,7 +38,7 @@ html(lang='en', ng-app='epollo')
               .dropdown-menu(aria-labelledby='navbarDropdown')
                 - var userLink = user.permalink;
                 a.dropdown-item(href='/users/' + userLink)= user.username
-                a.dropdown-item(href='/users/' + userLink + '/settings').disabled Settings
+                a.dropdown-item(href='/users/' + userLink + '/settings') Settings
                 .dropdown-divider
                 a.dropdown-item(href='/signout') Sign out
             li.nav-item

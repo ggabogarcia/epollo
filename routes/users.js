@@ -55,13 +55,23 @@ router.get('/:permalink', (req, res, next) => {
  });
 });
 
-/* TODO: Settings page for users
-router.get('/settings', onlyLogined, (req, res, next) => {
-
+router.get('/:username/settings', onlyLogined, (req, res, next) => {
+  getUserByUsername(req.params.username, (err, result) => {
+    if(err) return res.status(404).send();
+    if(result == null || result.username != req.user.username) {
+      return res.status(404).send();
+    } else {
+      res.render('settings', {
+        title: result.name.first + ' ' + result.name.last + '\'s settings',
+        user: req.user
+      });
+    }
+  });
 });
 
-router.post('/settings/update', onlyLogined, (req, res, next) => {
-
+router.post('/:username/settings/update', onlyLogined, (req, res, next) => {
+  // TODO: Update settings
+  return res.status(404).send();
 });
-*/
+
 module.exports = router;
