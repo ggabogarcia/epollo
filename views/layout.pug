@@ -38,11 +38,11 @@ html(lang='en', ng-app='epollo')
               .dropdown-menu(aria-labelledby='navbarDropdown')
                 - var userLink = user.permalink;
                 a.dropdown-item(href='/users/' + userLink)= user.username
-                a.dropdown-item(href='#', style='cursor:not-allowed;').disabled Settings
+                a.dropdown-item(href='/users/' + userLink + '/settings').disabled Settings
                 .dropdown-divider
                 a.dropdown-item(href='/signout') Sign out
             li.nav-item
-              a.nav-link(href='/newstory') Create a new story
+              a.nav-link(href='/newstory') Write
           if !user
             li.nav-item
               a.nav-link(href='/signin') Sign in

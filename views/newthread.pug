@@ -18,10 +18,10 @@ block content
         .col-sm-3
           p.h4 Title of your line: 
         .col-sm-9
-          input.form-control(name='stitle', type='text', placeholder='Give it a short and apposite name.', required)
+          input.form-control(name='stitle', type='text', placeholder='Give it a short and apposite name.', required, autocomplete='off')
       .row
         .col-sm-12
-          textarea.form-control(name='text', rows='10', placeholder='If you want threads from others it's recommended to write a shorter instead of a long story.', required)
+          textarea.form-control(name='text', rows='10', placeholder='If you want threads from others it\'s recommended to write a shorter instead of a long story.', required)
       .row.text-center
         .col-sm-12
           input.form-control(name='genres', type='text', placeholder='Add genres separated with comma', required)
@@ -30,4 +30,4 @@ block content
             br
             input(name='color', type='color')
           br
-          button.btn.btn-info(type='submit') Submit story  
+          button.btn.btn-info(type='submit') Submit storyline  
