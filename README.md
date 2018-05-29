@@ -40,14 +40,21 @@ Create a folder ```pids``` and place your database url to a file called ```keys.
 }
 ```
 
+After work, compile TypeScript files:
+```
+gulp build
+```
+
 Running the website on your computer:
+```
+DEBUG=epollo:* npm start
+```
+or
 ```
 npm start
 ```
-
-You can also use nodemon:
+or
 ```
-npm i -g nodemon
 nodemon epollo
 ```
 
@@ -63,6 +70,8 @@ npm test
 
 ## Built With
 
+* [Gulp](https://gulpjs.com/) - Task runner
+* [TypeScript](https://www.typescriptlang.org/) - JavaScript compiler
 * [MongoDB](https://www.mongodb.com/) - NoSQL database
 * [Express](https://expressjs.com/) - NodeJS web application framework
 * [AngularJS](https://angular.io/) - JavaScript Front-end framework

@@ -20,7 +20,7 @@ block content
           label Password
           input.form-control(name='password', type='password', placeholder='') 
       label Bio
-      textarea.form-control(style='resize: none;', name='bio', type='text', rows='3', value= user.bio, placeholder='Tell something about yourself!')
+      textarea.form-control(style='resize: none;', name='bio', type='text', rows='3', value= user.bio, placeholder='Tell others something about yourself!')
       if user.stories || user.threads
         .text-center
           label Writings
@@ -39,7 +39,7 @@ block content
                   each thread in user.threads
                     li
                       a(href='/stories/' + thread.permalink)= thread.title
-      .text-center
+      //.text-center
         button.btn.btn-primary(type='submit') Save settings
         br
         // Here, users can delete their writings or the entire profile

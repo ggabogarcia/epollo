@@ -2,10 +2,10 @@
   "name": "epollo",
   "version": "1.2.0",
   "description": "Epollo is free to use site, where you can both read, and write stories. This page allows you to participate in the story by writing new storylines.",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "jasmine",
-    "start": "node server.js"
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,11 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-typescript": "^4.0.2",
+    "typescript": "^2.8.3"
   }
 }

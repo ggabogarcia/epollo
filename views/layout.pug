@@ -1,5 +1,5 @@
 doctype html
-html(lang='en', ng-app='epollo')
+html(lang='en')
   head
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     title= title
@@ -15,7 +15,7 @@ html(lang='en', ng-app='epollo')
     meta(property='og:type', content='website')
     meta(property='og:title', content= title)
     meta(property='og:description', content='Live through what you read. Get in the story. Decide what to do. Write a new story thread for stories from other authors, or write your own.')
-    link(rel='icon', href='/images/logo-min.png')
+    link(rel='icon', href='/images/logo/icon.png')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(defer='', src='https://use.fontawesome.com/releases/v5.0.8/js/all.js')
     link(href='https://fonts.googleapis.com/css?family=Roboto|Merriweather|Merriweather:900', rel='stylesheet')
@@ -25,9 +25,12 @@ html(lang='en', ng-app='epollo')
     link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', rel='stylesheet', type='text/css')
     link(href='/stylesheets/style.css', rel='stylesheet', type='text/css')
     script#cookieinfo(type='text/javascript', src='//cookieinfoscript.com/js/cookieinfo.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js')
   body
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      a.main-title(href='/') Epollo 
+      a.main-title(href='/')
+        img(src='/images/logo/title.png', title='Epollo', alt='Epollo')
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
@@ -45,9 +48,12 @@ html(lang='en', ng-app='epollo')
               a.nav-link(href='/newstory') Write
           if !user
             li.nav-item
-              a.nav-link(href='/signin') Sign in
+              a.nav-link(href='/signup') Sign Up
+            li.nav-item
+              a.nav-link(href='/signin') Sign In
           li.nav-item.dropdown
-            a#navbarReadDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Read
+            a#navbarReadDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown',
+              aria-haspopup='true', aria-expanded='false') Read
             .dropdown-menu(aria-labelledby='navbarReadDropdown')
               a.dropdown-item(href='/stories') Browse
               a.dropdown-item(href='/users') Authors
@@ -57,6 +63,3 @@ html(lang='en', ng-app='epollo')
             button.btn.btn-outline-secondary(type='submit')
               i.fas.fa-search
     block content
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js')
-    script(src='/modules/controllers.js')
-    script(src='/modules/app.js')
