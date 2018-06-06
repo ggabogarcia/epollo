@@ -1,4 +1,4 @@
- <p align="center"><img src="https://i.imgur.com/d3INOEf.png"></p>
+ <p align="center"><img src="https://i.imgur.com/MZdvLnw.png"></p>
 
 # epollo [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Take%20a%20look%20at%20this%20repository%20https://github.com/MartinKondor/epollo/)
 [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat-square)](https://epollo.herokuapp.com/)
